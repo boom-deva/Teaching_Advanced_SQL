@@ -1,0 +1,70 @@
+create table houses (
+	id int,
+	name varchar(100),
+	domain varchar(100),
+	primary key (id)
+);
+
+insert into houses values (1,'stark','winterfell');
+insert into houses values (2,'greyjoy','pyke');
+insert into houses values (3,'lannister','casterly rock');
+insert into houses values (4,'martell','sunspear');
+insert into houses values (5,'tyrell','highgarden');
+insert into houses values (6,'targaryen','king''s landing');
+insert into houses values (7,'baratheon','storm''s end');
+insert into houses values (8,'tully','riverrun');
+insert into houses values (9,'arryn','vale');
+
+----------------------------------------------------
+create table bannermen (
+	id int,
+	name varchar(100),
+	size int,
+	leader_house_id int,
+	primary key (id)
+);
+
+insert into bannermen values (1, 'karstark', 50, 1);
+insert into bannermen values (2, 'clegane',	15,	3);
+insert into bannermen values (3, 'hightower', 25, 5);
+insert into bannermen values (4, 'glover', 45, 1);
+insert into bannermen values (5, 'mormont', 35, 1);
+insert into bannermen values (6, 'blackwood', 25, 8);
+insert into bannermen values (7, 'florent', 10, 5);
+insert into bannermen values (8, 'tarly', 20, 5);
+insert into bannermen values (9, 'selmy', 40, 7);
+insert into bannermen values (10, 'tarth', 20, 7);
+insert into bannermen values (11, 'harlaw', 15, 2);
+insert into bannermen values (12, 'umber', 10, 1);
+insert into bannermen values (13,	'whent', 25, 8);
+
+----------------------------------------------------
+create table people (
+	id int,
+	first_name varchar(100),
+	house varchar(100),
+	nickname varchar(100),
+	alive int,
+	primary key (id)
+);
+
+insert into people values (1, 'jaime', 'lannister', 'kingslayer', 1);
+insert into people values (2, 'eddard', 'stark', 'ned', 0);
+insert into people values (3, 'oberyn', 'martell', 'viper', 0);
+insert into people values (4, 'robert', 'baratheon', NULL, 0);
+insert into people values (5, 'arya', 'stark', 'no one', 1);
+insert into people values (6, 'aegon', 'targaryen', 'jon', 1);
+insert into people values (7, 'theon', 'greyjoy', 'reek', 0);
+insert into people values (8, 'yara', 'greyjoy', NULL, 1);
+insert into people values (9, 'tywin', 'lannister', NULL, 0);
+insert into people values (10, 'brynden', 'tully', 'blackfish', 0);
+insert into people values (11, 'cersei', 'lannister', 'queen', 1);
+insert into people values (12, 'brandon', 'stark', 'three-eyed raven', 1);
+insert into people values (13, 'sansa', 'stark', NULL, 1);
+insert into people values (14, 'tyrion', 'lannister', 'imp', 1);
+insert into people values (15, 'brienne', 'tarth', NULL, 1);
+insert into people values (16, 'samwell', 'tarly', 'sam', 1);
+insert into people values (17, 'great jon', 'umber', NULL, 0);
+insert into people values (18, 'barristan', 'selmy', NULL, 0);
+insert into people values (19, 'aerys', 'targaryen', 'mad king', 0);
+insert into people values (20, 'alannys', 'harlow', NULL, 0);
